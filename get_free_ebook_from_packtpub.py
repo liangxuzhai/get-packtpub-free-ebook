@@ -63,8 +63,12 @@ def step4(link):
         x = x.text.strip()
         if freetoday in x:
             x = highlight(x)
-        print('\t{0}'.format(x))
-
+        # a problem here.
+        try:
+            print('\t{0}'.format(x))
+        except:
+            pass
+        
 def main():
     step2()
     free_link = step3()
